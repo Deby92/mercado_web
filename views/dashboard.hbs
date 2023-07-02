@@ -1,0 +1,28 @@
+{{#if frutas}}
+<nav class="navbar bg-light">
+  <div class="container-fluid">
+    <a class="navbar-brand">Navbar</a>
+    <form class="d-flex" role="search">
+      <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+      <button class="btn btn-outline-success" type="submit">Search</button>
+    </form>
+  </div>
+</nav>
+
+{{#each arrfrutas}}
+
+
+<div class="card row col-4 float-end ">
+  <div class="row col-4 m-4 p-3 container justify-content-center">
+    <img src="/static/images/{{this.nombre}}.png" class="card-img-top-center m-start-5" style="width: 500px;" alt="...">
+    <div class="card-body">
+      <h5 class="card-title">{{this.nombre}}</h5>
+      <a href="#" class="btn btn-primary"><i class="bi bi-cart3"></i> Comprar</a>
+    </div>
+  </div>
+</div>
+
+
+{{/each}}
+
+{{/if}}
